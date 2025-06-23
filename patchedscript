@@ -1,0 +1,396 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+
+local Window = Rayfield:CreateWindow({
+    Name = "version 2",
+    LoadingTitle = "smrr private instance",
+    LoadingSubtitle = "you're special congratulations",
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = nil,
+        FileName = "SMRB"
+    },
+    Discord = {
+        Enabled = false,
+        Invite = "0",
+        RememberJoins = false
+    },
+    KeySystem = false
+})
+
+local Tab = Window:CreateTab("Main Functions")
+
+local WeaponsSection = Tab:CreateSection("Current category: Main Functions")
+
+Tab:CreateButton({
+    Name = "Action: Give everyone PickPop token",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("PickPop") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.PickPop:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will fire a remote on everybody in the server, giving them free access to the Pickmeup-Pop vending machine."})
+
+Tab:CreateButton({
+    Name = "Action: Respawn everyone",
+    Callback = function()
+        local Players = game:GetService("Players")
+        for _, player in pairs(Players:GetPlayers()) do
+            local respawnEvent = player:FindFirstChild("Respawn-Character")
+            if respawnEvent then
+                local args = {
+                    [1] = Players.LocalPlayer.StarterGear
+                }
+                respawnEvent:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action respawns everybody in the server. If you would only like to respawn yourself, utilise the tab labeled Self."})
+
+Tab:CreateButton({
+    Name = "Action: Give everyone military equipment",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("MGear") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.MGear:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action gives everybody the Military Equipment tools received from owning the Smackle Chew/Military Equipment gamepass."})
+
+Tab:CreateButton({
+    Name = "Action: Give everyone FruityCola token",
+    Callback = function()
+
+            local Players = game:GetService("Players")
+            local LocalPlayer = Players.LocalPlayer
+
+            for _, player in pairs(Players:GetPlayers()) do
+                if player:FindFirstChild("FCola") then
+                    local args = {
+                        [1] = LocalPlayer.StarterGear
+                    }
+                    player.FCola:FireServer(unpack(args))
+                end
+            end
+        end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action gives everyone in the server free access to the Fruity-Cola vending machine."})
+
+Tab:CreateButton({
+    Name = "Action: Attempt remote scan",
+    Callback = function()
+        print("Remote scanning is currently disabled. If this is an error, report this to the Discord server with the error code #2819949290")
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action attempts a remote scan, which lets you fire every remote in the game for testing purposes. Please note that this will kick you and sort of ruin the game!"})
+
+Tab:CreateButton({
+    Name = "Action: Force a static anim on everyone",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("Twitter3") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.Twitter3:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will cause everyone's screens to be ruined by a static animation caused by a Twitter code remote."})
+
+Tab:CreateButton({
+    Name = "Action: Delete everyones accessories",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("ClearHats") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.ClearHats:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action causes everybody's hats to disappear as it utilises a ClearHats remote implemented into the game."})
+
+Tab:CreateButton({
+    Name = "Action: Server-based advanced render",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("AdvancedRender") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.AdvancedRender:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will force everybody to go into an Advanced Render state, deleting most pieces of the map for them. Please note that spamming this could crash your game or others'."})
+
+Tab:CreateButton({
+    Name = "Action: Give everyone popcorn tool",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("Twitter1") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.Twitter1:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give everybody inside of the server the Popcorn tool, obtained by using a Twitter code in the past."})
+
+Tab:CreateButton({
+    Name = "Action: Give everyone latte tool",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("Twitter2") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.Twitter2:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give everybody inside of the server the Latte tool, obtained by using a Twitter code in the past."})
+
+Tab:CreateButton({
+    Name = "Action: Give everyone camcorder tool",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("Twitter4") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.Twitter4:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give everybody inside of the server the CamCorder tool, obtained by using a Twitter code in the past."})
+
+Tab:CreateButton({
+    Name = "Action: Give everyone gravity gamepass",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("Gravity") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.Gravity:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give everyone in the server the Gravity gamepass without having to pay for it."})
+
+Tab:CreateButton({
+    Name = "Action: Give everyone pets gamepass",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("Pets") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.Pets:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give everyone in the server the Pets gamepass without having to pay for it."})
+
+Tab:CreateButton({
+    Name = "Action: Give everyone taunt gamepass",
+    Callback = function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        for _, player in pairs(Players:GetPlayers()) do
+            if player:FindFirstChild("Taunt") then
+                local args = {
+                    [1] = LocalPlayer.StarterGear
+                }
+                player.Taunt:FireServer(unpack(args))
+            end
+        end
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give everyone in the server the Taunt gamepass without having to pay for it."})
+
+local Tab = Window:CreateTab("Self-usage")
+
+local HumanoidSection = Tab:CreateSection("Current category: Self-usage")
+
+Tab:CreateButton({
+    Name = "Action: Get military equipment",
+    Callback = function()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer.StarterGear
+        }
+
+        game:GetService("Players").LocalPlayer.MGear:FireServer(unpack(args))
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give you Military Equipment without owning the Smackle Chew/Military Equipment gamepass."})
+
+Tab:CreateButton({
+    Name = "Action: Toggle infinite stamina",
+    Callback = function()
+        local player = game.Players.LocalPlayer
+local staminaValue = player:WaitForChild("PlayerGui"):WaitForChild("Custom Stamina"):WaitForChild("Bar"):WaitForChild("Stamina")
+
+staminaValue.Value = 99999999
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will toggle infinite stamina for you, essentially meaning you can run forever without stamina expiration."})
+
+Tab:CreateButton({
+    Name = "Action: Get popcorn tool",
+    Callback = function()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer.StarterGear
+        }
+
+        game:GetService("Players").LocalPlayer.Twitter1:FireServer(unpack(args))
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give you the Popcorn tool, which was previously obtained through the usage of a Twitter code."})
+
+Tab:CreateButton({
+    Name = "Action: Get latte tool",
+    Callback = function()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer.StarterGear
+        }
+
+        game:GetService("Players").LocalPlayer.Twitter1:FireServer(unpack(args))
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give you the Latte tool, which was previously obtained through the usage of a Twitter code."})
+
+Tab:CreateButton({
+    Name = "Action: Get PickPop token",
+    Callback = function()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer.StarterGear
+        }
+
+        game:GetService("Players").LocalPlayer.PickPop:FireServer(unpack(args))
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will give you free access to the Pickmeup-Pop vending machine without needing to own the gamepass."})
+
+Tab:CreateButton({
+    Name = "Action: Get FruityCola token",
+    Callback = function()
+        local args = {
+            [1] = game:GetService("Players").LocalPlayer.StarterGear
+        }
+
+        game:GetService("Players").LocalPlayer.FCola:FireServer(unpack(args))
+    end
+})
+
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will respawn your character without needing to wait to respawn. If you want to reset, use the ;spawn command with Infinite Yield before using this."})
+
+Tab:CreateButton({
+    Name = "Action: Execute infinite yield",
+    Callback = function()  loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will execute the latest version of Infinite Yield. It is a command-based script utilising character exploits."})
+
+local Tab = Window:CreateTab("Game-based")
+
+local GameSection = Tab:CreateSection("Current category: Game-based")
+
+Tab:CreateButton({
+    Name = "Action: Quick-press elevator",
+    Callback = function()
+        fireclickdetector(workspace.Lift.DownButton.ClickDetector) 
+fireclickdetector(workspace.Lift.UpButton.ClickDetector)
+fireclickdetector(workspace.Lift.FuseBox.FuseButton.ClickDetector)
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will fire the ClickDetector for the elevator button, either moving it up or down. Make sure to use the Fix Power function before using this."})
+
+Tab:CreateButton({
+    Name = "Action: Restore power",
+    Callback = function()
+        fireclickdetector(workspace.PowerPlant.Panel4.Button.ClickDetector)
+fireclickdetector(workspace.PowerPlant.Panel3.Button.ClickDetector)
+fireclickdetector(workspace.PowerPlant.Panel2.Button.ClickDetector)
+fireclickdetector(workspace.PowerPlant.Panel1.Button.ClickDetector)
+    end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action will restore the power, which handles every electric-based structure in the game such as the elevator."})
