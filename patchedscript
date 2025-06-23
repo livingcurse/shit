@@ -327,7 +327,7 @@ Tab:CreateButton({
             [1] = game:GetService("Players").LocalPlayer.StarterGear
         }
 
-        game:GetService("Players").LocalPlayer.Twitter1:FireServer(unpack(args))
+        game:GetService("Players").LocalPlayer.Twitter2:FireServer(unpack(args))
     end
 })
 
