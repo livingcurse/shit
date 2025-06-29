@@ -99,6 +99,26 @@ Tab:CreateButton({
 local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action gives everyone in the server free access to the Fruity-Cola vending machine."})
 
 Tab:CreateButton({
+    Name = "Action: Give everyone OriginalCola token",
+    Callback = function()
+
+            local Players = game:GetService("Players")
+            local LocalPlayer = Players.LocalPlayer
+
+            for _, player in pairs(Players:GetPlayers()) do
+                if player:FindFirstChild("OCola") then
+                    local args = {
+                        [1] = LocalPlayer.StarterGear
+                    }
+                    player.FCola:FireServer(unpack(args))
+                end
+            end
+        end
+})
+
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action gives everyone in the server free access to the Original-Cola vending machine."})
+
+Tab:CreateButton({
     Name = "Action: Attempt remote scan",
     Callback = function()
         print("Remote scanning is currently disabled. If this is an error, report this to the Discord server with the error code #2819949290")
