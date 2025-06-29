@@ -119,13 +119,13 @@ Tab:CreateButton({
 local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action gives everyone in the server free access to the Original-Cola vending machine."})
 
 Tab:CreateButton({
-    Name = "Action: Attempt remote scan",
+    Name = "Action: ...",
     Callback = function()
-        print("Remote scanning is currently disabled. If this is an error, report this to the Discord server with the error code #2819949290")
+        print(".")
     end
 })
 
-local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action attempts a remote scan, which lets you fire every remote in the game for testing purposes. Please note that this will kick you and sort of ruin the game!"})
+local Paragraph = Tab:CreateParagraph({Title = "Description", Content = "This action is disabled temporarily, and I will replace it shortly."})
 
 Tab:CreateButton({
     Name = "Action: Force a static anim on everyone",
